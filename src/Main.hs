@@ -9,8 +9,8 @@ main :: IO ()
 main = do
   -- dat <- map (map read . words) . lines <$> getContents
   -- let size = succ $ maximum $ concat dat :: Int
-  let size = 16
-  dat <- replicateM 16 $ do
+  let size = 100
+  dat <- replicateM 100 $ do
     i <- randomRIO (0, size - 2)
     j <- randomRIO (i + 1, size - 1)
     pure (i, j)
